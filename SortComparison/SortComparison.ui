@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SortComparisonClass</class>
+ <widget class="QMainWindow" name="SortComparisonClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>673</width>
+    <height>654</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>673</width>
+    <height>654</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>673</width>
+    <height>654</height>
+   </size>
+  </property>
+  <property name="windowtitle" stdset="0">
+   <string>SortComparison</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>651</width>
+      <height>621</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>数据排序</string>
+     </attribute>
+     <widget class="QPushButton" name="btn_rand">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>20</y>
+        <width>141</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Agency FB</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>生成随机数字</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_sort">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>20</y>
+        <width>141</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Agency FB</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>排序</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>40</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Agency FB</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>排序算法：</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="com_alg">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>30</y>
+        <width>161</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Agency FB</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <item>
+       <property name="text">
+        <string>插入排序</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>希尔排序</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>冒泡排序</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>快速排序</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>简单选择排序</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>堆排序</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>归并排序</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>基数排序</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>鸡尾酒排序</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Bogo排序</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QTextEdit" name="text_num">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>100</y>
+        <width>631</width>
+        <height>211</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="tableWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>330</y>
+        <width>631</width>
+        <height>261</height>
+       </rect>
+      </property>
+      <column>
+       <property name="text">
+        <string>排序算法</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>数据量</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>耗时(ms)</string>
+       </property>
+      </column>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="widget">
+     <attribute name="title">
+      <string>排序比较</string>
+     </attribute>
+     <widget class="QCheckBox" name="check_Shell">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>20</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>宋体</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>希尔排序</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_export">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>60</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>导出</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="check_Heap">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>60</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>宋体</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>堆排序</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="check_Selection">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>60</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>宋体</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>简单选择排序</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="check_Bubble">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>20</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>宋体</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>冒泡排序</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="check_Insertion">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>宋体</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>插入排序</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>140</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Agency FB</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>对比图</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="check_Merge">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>60</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>宋体</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>归并排序</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="check_cocktail">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>100</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>宋体</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>鸡尾酒排序</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="check_Radix">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>60</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>宋体</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>基数排序</string>
+      </property>
+     </widget>
+     <widget class="QtCharts::QChartView" name="graphicsView">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>170</y>
+        <width>631</width>
+        <height>421</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Agency FB</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="check_bogo">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>100</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>宋体</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Bogo排序</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_com">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>20</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>比较</string>
+      </property>
+      <property name="tooltip" stdset="0">
+       <string/>
+      </property>
+      <property name="statustip" stdset="0">
+       <string notr="true"/>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="check_Quick">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>20</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>宋体</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>快速排序</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_clean">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>100</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>清空</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>100</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>宋体</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>数据规模：</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spin_count">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>100</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <number>100000</number>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QtCharts::QChartView</class>
+   <extends>QGraphicsView</extends>
+   <header location="global">qchartview.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="SortComparison.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>btn_sort</sender>
+   <signal>clicked()</signal>
+   <receiver>SortComparisonClass</receiver>
+   <slot>btn_sort_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>366</x>
+     <y>86</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>328</x>
+     <y>-17</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_rand</sender>
+   <signal>clicked()</signal>
+   <receiver>SortComparisonClass</receiver>
+   <slot>btn_rand_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>550</x>
+     <y>91</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>499</x>
+     <y>-5</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_com</sender>
+   <signal>clicked()</signal>
+   <receiver>SortComparisonClass</receiver>
+   <slot>btn_com_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>610</x>
+     <y>77</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>462</x>
+     <y>9</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_export</sender>
+   <signal>clicked()</signal>
+   <receiver>SortComparisonClass</receiver>
+   <slot>btn_export_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>581</x>
+     <y>109</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>544</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_clean</sender>
+   <signal>clicked()</signal>
+   <receiver>SortComparisonClass</receiver>
+   <slot>btn_clean_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>607</x>
+     <y>147</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>314</x>
+     <y>5</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>btn_sort_click()</slot>
+  <slot>btn_rand_click()</slot>
+  <slot>btn_com_click()</slot>
+  <slot>btn_export_click()</slot>
+  <slot>btn_clean_click()</slot>
+ </slots>
+</ui>
